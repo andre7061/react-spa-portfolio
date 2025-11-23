@@ -16,9 +16,11 @@ export const ProjectsPage = () => {
       <div className="projects-grid">
         {projectsData.map((item) => {
           return (
-            <div key={item.id} className="project-card">
+            <div  key={item.id} className="project-card">
               <h3>{item.name}</h3>
               <p>{item.description}</p>
+              {/* <img src={item.img}/> */}
+            {/* <button className='btn-link'> ➜</button> */}
             </div>
           );
         })}

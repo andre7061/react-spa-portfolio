@@ -27,6 +27,7 @@ export const projectsData = [
     id: 4,
     name: 'Калькулятор',
     description: 'Функциональный калькулятор с основными математическими операциями',
+    img:'./projects/calculator.jpg',
     technologies: ['React', 'CSS'],
     githubUrl: 'https://github.com/username/calculator',
     demoUrl: 'https://username.github.io/calculator',

@@ -249,27 +249,33 @@ main {
 }
 
 /* Стили для специальных кнопок */
-.calculator button:nth-child(1) { /* C */
+.calculator button:nth-child(1) {
+  /* C */
   background: #ff4444;
 }
-.calculator button:nth-child(2) { /* % */
+.calculator button:nth-child(2) {
+  /* % */
   background: #555;
 }
-.calculator button:nth-child(3) { /* ⌫ */
+.calculator button:nth-child(3) {
+  /* ⌫ */
   background: #555;
 }
 .calculator button:nth-child(4),  /* ÷ */
 .calculator button:nth-child(8),  /* × */
 .calculator button:nth-child(12), /* - */
-.calculator button:nth-child(16) { /* + */
+.calculator button:nth-child(16) {
+  /* + */
   background: #ff9500;
 }
-.calculator button:nth-child(19) { /* = */
+.calculator button:nth-child(19) {
+  /* = */
   background: #ff9500;
   grid-column: span 2;
 }
 
-.calculator button:nth-child(18) { /* , */
+.calculator button:nth-child(18) {
+  /* , */
   background: #666;
 }
 
@@ -285,6 +291,84 @@ main {
 .calculator button:nth-child(15),
 .calculator button:nth-child(17) {
   background: #888;
+}
+
+img {
+  max-width: 300px;
+  height: 300px;
+}
+.project-card {
+  position: relative;
+  min-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* Кнопка перехода */
+.btn-link {
+  display: inline-block;
+  background: transparent;
+ font-size: 18px;
+  color: #0f0f0f;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid #2980b9;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.project-link-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Сетка проектов */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    min-height: 250px;
+  }
+
+  .project-card-content {
+    padding: 20px;
+  }
 }
 
 /* Адаптивность для мобильных */
