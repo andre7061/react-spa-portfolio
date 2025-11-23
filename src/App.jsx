@@ -9,7 +9,7 @@ import { HomePage } from './components/Pages/HomePage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-spa-portfolio">
       <Header />
       <main>
         <Routes>
